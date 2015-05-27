@@ -507,8 +507,7 @@ h2 {
   position: absolute; }
 
 .content {
-  max-height: 20px;
-  padding: 50px 20px 0;
+  padding: 50px 20px 20px;
   border-color: transparent;
   border-width: 2px;
   border-style: solid;
@@ -538,7 +537,6 @@ h2 {
 
 .content p,
 .content ul {
-  max-height: 0;
   color: transparent;
   text-align: justify;
   word-break: break-word;
@@ -556,15 +554,16 @@ label {
 .radio {
   display: none; }
 
-.radio:checked + .relative label {
+.radio + .relative label {
   cursor: auto;
-  transform: translateX(42px); }
+  margin-top: 40px;
+  /*transform: translateX(42px);*/
+  padding-left: 40px; }
 
 .radio:checked + .relative .circle {
   background: #f98262; }
 
 .radio:checked ~ .content {
-  max-height: 180px;
   border-color: #111111;
   margin-right: 20px;
   transform: translateX(20px);
@@ -572,7 +571,6 @@ label {
 
 .radio:checked ~ .content p,
 .radio:checked ~ .content ul {
-  max-height: 200px;
   color: #111111;
   transition: color 0.3s linear 0.3s; }
 
