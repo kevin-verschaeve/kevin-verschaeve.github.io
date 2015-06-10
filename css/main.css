@@ -474,13 +474,24 @@ h2 {
  * ------------------------------------- */
 #timeline {
   list-style: none;
-  margin: 50px 0 30px 120px;
+  margin: 0 0 30px 120px;
   padding-left: 30px;
   border-left: 8px solid #111111; }
 
 #timeline li.work {
   margin: 40px 0;
   position: relative; }
+
+#timeline li.work.first {
+  padding-top: 40px;
+  margin-top: 0; }
+
+#timeline li.work.first label {
+  margin-top: 40px;
+}
+#timeline li.work.first .timeline-circle {
+  margin-top: 10px;
+}
 
 #timeline p {
   margin: 0 0 15px; }
@@ -551,26 +562,21 @@ label {
   top: 20px;
   transition: transform 0.2s linear; }
 
-.radio {
-  display: none; }
-
-.radio + .relative label {
+.relative label {
   cursor: auto;
-  margin-top: 40px;
-  /*transform: translateX(42px);*/
   padding-left: 40px; }
 
 .radio:checked + .relative .circle {
   background: #f98262; }
 
-.radio:checked ~ .content {
+.content {
   border-color: #111111;
   margin-right: 20px;
   transform: translateX(20px);
   transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear; }
 
-.radio:checked ~ .content p,
-.radio:checked ~ .content ul {
+.content p,
+.content ul {
   color: #111111;
   transition: color 0.3s linear 0.3s; }
 
@@ -582,9 +588,6 @@ label {
     margin-left: 0;
     padding-left: 0;
     border-left: none; }
-
-  #timeline li {
-    margin: 50px 0; }
 
   label {
     width: 85%;
@@ -605,15 +608,15 @@ label {
 
   .content:before {
     border-bottom-color: inherit;
-    border-width: 17px;
-    top: -16px;
+    border-width: 23px;
+    top: -26px;
     left: 50px;
-    margin-left: -17px; }
+    margin-left: -23px; }
 
   .content:after {
     border-bottom-color: #48b379;
     border-width: 20px;
-    top: -20px;
+    top: -23px;
     left: 50px;
     margin-left: -20px; }
 
@@ -621,5 +624,17 @@ label {
     font-size: 0.9em;
     line-height: 1.4; }
 
-  .circle, .date {
-    display: none; } }
+  .circle {
+    display: none; }
+
+  .date {
+    font-size: 0.95em;
+    line-height: 20px;
+    position: inherit;
+    max-width: inherit;
+
+    margin-bottom: 25px;
+    display: block;
+    font-style: italic;
+  }
+}
