@@ -1,3 +1,17 @@
+.site-header {
+	background: #aaa;
+}
+
+.troll-text {
+	font-size: 4rem;
+	text-align: center;
+	font-family: Helvetica;
+	font-style: italic;
+	color: #FFF;
+
+	padding: 20px 0;
+}
+
 #chez-vous {
 	margin-top: 30px;
 }
