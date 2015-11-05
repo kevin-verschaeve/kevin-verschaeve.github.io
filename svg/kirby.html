@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Kirby</title>
+
+	<style>
+		body {margin:0;padding:0;}
+	</style>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		document.getElementById('kirby').addEventListener('click', playAudio, false);
+
+		function playAudio(){
+			var player = getPlayer();
+
+			player.src = 'utils/pierre.mp3';
+			player.play();
+		};
+
+		function getPlayer() {
+			var 	
+			container = document.getElementById("container"),
+			player = document.createElement("audio");
+			
+			container.appendChild(player);
+			
+			return player;
+		};
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <title>Kirby</title>
+		    <desc>desc</desc>
+
+		    <defs>
+		        <radialGradient id="corps" r="50%" cx="50%" cy="50%" fy="10%" fx="50%">
+		            <stop offset="0%" style="stop-color:#FFE4F6; stop-opacity:1"/>
+		            <stop offset="50%" style="stop-color:#FFC2D8; stop-opacity:1"/>
+		            <stop offset="100%" style="stop-color:#FC99BC; stop-opacity:1"/>
+		        </radialGradient>
+
+		         <linearGradient id="linear-oeil" x1="0%" y1="0%" x2="0%" y2="100%">
+		            <stop offset="0%" style="stop-color:#011742; stop-opacity:1"/>
+		            <stop offset="20%" style="stop-color:#01308c; stop-opacity:1"/>
+		            <stop offset="60%" style="stop-color:#00205d; stop-opacity:1"/>
+		            <stop offset="100%" style="stop-color:#001343; stop-opacity:1"/>
+		        </linearGradient>
+
+		        <filter id="paumettes">
+		            <feGaussianBlur stdDeviation="2" />
+		        </filter>
+
+		        <radialGradient id="langue" r="50%" cx="50%" cy="50%" fy="50%" fx="50%">
+		            <stop offset="0%" style="stop-color:#fe3a99; stop-opacity:1"/>
+		            <stop offset="50%" style="stop-color:#ea055b; stop-opacity:1"/>
+		            <stop offset="100%" style="stop-color:#d60652; stop-opacity:1"/>
+		        </radialGradient>
+
+		        <radialGradient id="pied" r="50%" cx="50%" cy="50%" fy="50%" fx="20%">
+		            <stop offset="0%" style="stop-color:#f11319; stop-opacity:1"/>
+		            <stop offset="80%" style="stop-color:#ae090f; stop-opacity:1"/>
+		            <stop offset="100%" style="stop-color:#740c0e; stop-opacity:1"/>
+		        </radialGradient>
+
+		        <radialGradient id="bras" r="50%" cx="50%" cy="50%" fy="50%" fx="0%">
+		            <stop offset="0%" style="stop-color:#FFE4F6; stop-opacity:1"/>
+		            <stop offset="60%" style="stop-color:#FFC2D8; stop-opacity:1"/>
+		            <stop offset="100%" style="stop-color:#FC99BC; stop-opacity:1"/>
+		        </radialGradient>
+		    </defs>
+
+		    <!-- pieds -->
+		    <ellipse cx="630" cy="300" rx="60" ry="90" transform="rotate(130, 630,300)" style="fill:url(#pied)"/>
+		    <ellipse cx="450" cy="350" rx="60" ry="80" style="fill:url(#pied)"/>
+
+		    <!-- bras -->
+		    <ellipse cx="600" cy="130" rx="50" ry="80" transform="rotate(45, 600, 130)" style="fill:url(#bras)"/>
+		    <ellipse cx="370" cy="200" rx="50" ry="80" transform="rotate(105, 370, 200)" style="fill:url(#bras)"/>
+
+		    <!-- corps -->
+		    <circle cx="500" cy="200" r="150" fill="url(#corps)" id="kirby"/>
+
+		    <!-- yeux -->
+		    <ellipse cx="450" cy="160" rx="18" ry="40" style="fill:black;stroke-width:2;" transform="skewX(8)" />
+		    <ellipse cx="500" cy="150" rx="18" ry="40" style="fill:black;stroke-width:2;" transform="skewX(8)" />
+		    <ellipse cx="462" cy="142" rx="10" ry="15" style="fill:white;" transform="skewX(3)" />
+		    <ellipse cx="508" cy="132" rx="10" ry="15" style="fill:white;" transform="skewX(4)" />
+
+		    <!-- truc bleu dans les yeux -->
+		    <path d="m461,169 q11.5,5 25,-5 q-2,57 -26,5" style="fill:url(#linear-oeil);"/>
+		    <path d="m509,159 q14,10 27,-8 q-4,63 -28,5" style="fill:url(#linear-oeil);"/>
+
+		    <!-- paumettes -->
+		    <ellipse cx="460" cy="280" rx="15" ry="6" style="filter:url(#paumettes);fill:#fe0089;" transform="skewY(-8)" />
+		    <ellipse cx="560" cy="290" rx="15" ry="6" style="filter:url(#paumettes);fill:#fe0089;" transform="skewY(-10)" />
+
+
+		    <!-- bouche -->
+		    <path d="m495,300 40,0 q5,0 5,5 q0,20 -25,20 q-20,0 -25,-20 q0,-5 5,-5z" style="fill:black;stroke-width:2;stroke:black;" transform="skewY(-9)"/>
+
+		    <!-- langue -->
+		    <path d="m491,235 q22,-25 49,-9 q-6,17 -25,18 q-16,3 -21,-7z" style="fill:url(#langue);"/>
+		</svg>
+	</div>
+</body>
+</html>
