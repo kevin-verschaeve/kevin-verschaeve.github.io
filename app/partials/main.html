@@ -1,1 +1,23 @@
+<div>
+	<h2>Scéance n°{{ session.id }}</h2>
+	<p><i>{{ session.date }}</i></p>
 
+	<table border="2">
+		<thead>
+			<tr>
+				<td></td>
+				<td *ngFor="let film of session.films">
+					{{ film.name }}
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let voter of session.users">
+				<td>
+					{{ voter.name }}
+				</td>
+				<vote [voter]="voter" [films]="session.films"></vote>
+			</tr>
+		</tbody>
+	</table>
+</div>

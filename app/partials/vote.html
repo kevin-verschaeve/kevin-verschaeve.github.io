@@ -1,0 +1,1 @@
+<td *ngFor="let film of films" class="vote" [ngClass]="{'vote-on': hasVoted(film), 'vote-off': !hasVoted(film)}"></td>
