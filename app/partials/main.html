@@ -2,11 +2,11 @@
 	<h2>Scéance n°{{ session.id }}</h2>
 	<p><i>{{ session.date }}</i></p>
 
-	<table border="2">
+	<table class="bg--light-gray">
 		<thead>
 			<tr>
 				<td></td>
-				<td *ngFor="let movie of session.movies">
+				<td class="bold" *ngFor="let movie of session.movies">
 					{{ movie.name }}
 				</td>
 			</tr>
