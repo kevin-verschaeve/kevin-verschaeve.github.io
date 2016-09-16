@@ -1,7 +1,18 @@
 version: "2"
 
 services:
+    tools:
+      image: jeanberu/nodejs
+      volumes:
+          - .:/src
+
     node:
         image: jeanberu/nodejs
+        container_name: mardi
+        command: ["npm", "start"]
+        environment:
+            USR: root
         volumes:
             - .:/src
+        expose:
+            - 80
