@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Session } from './model/session';
-import { Vote } from './app.vote.ts';
+import { VoteComponent } from './vote.component';
 import { USERS } from './model/user.fixtures';
 import { FILMS } from './model/film.fixtures';
 
