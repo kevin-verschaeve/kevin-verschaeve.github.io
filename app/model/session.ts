@@ -1,9 +1,9 @@
 import { User } from './user';
-import { Film } from './film';
+import { Movie } from './movie';
 
 export class Session {
 	id: number;
 	date: string;
 	users: User[];
-	films: Film[];
+	movies: Movie[];
 }

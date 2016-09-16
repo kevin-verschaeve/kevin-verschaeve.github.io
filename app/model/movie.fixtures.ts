@@ -1,7 +1,7 @@
 import { USERS } from './user.fixtures';
-import { Film } from './film';
+import { Movie } from './movie';
 
-export const FILMS: Film[] = [
+export const MOVIES: Movie[] = [
 	{
 		id: 12345,
 		name: 'La route',

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Session } from './model/session';
 import { VoteComponent } from './vote.component';
 import { USERS } from './model/user.fixtures';
-import { FILMS } from './model/film.fixtures';
+import { MOVIES } from './model/movie.fixtures';
 
 @Component({
   selector: 'my-app',
@@ -17,7 +17,7 @@ export class AppComponent
 			id: 123,
 			date: '15/09/2016',
 			users: USERS,
-			films: FILMS
+			movies: MOVIES
 		}
 	}
 }

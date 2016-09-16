@@ -6,8 +6,8 @@
 		<thead>
 			<tr>
 				<td></td>
-				<td *ngFor="let film of session.films">
-					{{ film.name }}
+				<td *ngFor="let movie of session.movies">
+					{{ movie.name }}
 				</td>
 			</tr>
 		</thead>
@@ -16,7 +16,7 @@
 				<td>
 					{{ voter.name }}
 				</td>
-				<vote [voter]="voter" [films]="session.films"></vote>
+				<vote [voter]="voter" [movies]="session.movies"></vote>
 			</tr>
 		</tbody>
 	</table>

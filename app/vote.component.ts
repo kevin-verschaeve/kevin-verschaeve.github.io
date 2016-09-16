@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { User } from './model/user';
-import { Film } from './model/film';
+import { Movie } from './model/movie';
 
 @Component({
   selector: 'vote',
@@ -19,9 +19,9 @@ export class VoteComponent {
 	voter: User;
 
 	@Input()
-	films: Film;
+	movies: Movie[];
 
-	hasVoted(film) {
-		return film.voters.indexOf(this.voter) > -1;
+	hasVoted(movie) {
+		return movie.voters.indexOf(this.voter) > -1;
 	}
 }
