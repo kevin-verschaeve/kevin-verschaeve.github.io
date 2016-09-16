@@ -13,10 +13,12 @@
 		</thead>
 		<tbody>
 			<tr *ngFor="let voter of session.users">
-				<td>
-					{{ voter.name }}
+				<td class="bold">{{ voter.name }}</td>
+				<td *ngFor="let movie of session.movies" class="txt--center bg--off-white">
+					<i class="fa"
+						[ngClass]="{'fa-check fnt--green': hasVoted(voter, movie), 'fa-times fnt--red': !hasVoted(voter, movie)}">
+					</i>
 				</td>
-				<vote [voter]="voter" [movies]="session.movies"></vote>
 			</tr>
 		</tbody>
 	</table>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Session } from './model/session';
-import { VoteComponent } from './vote.component';
 import { USERS } from './model/user.fixtures';
 import { MOVIES } from './model/movie.fixtures';
 
@@ -19,5 +18,9 @@ export class AppComponent
 			users: USERS,
 			movies: MOVIES
 		}
+	}
+
+	hasVoted(voter, movie) {
+		return movie.voters.indexOf(voter) > -1;
 	}
 }
