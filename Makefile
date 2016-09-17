@@ -14,4 +14,7 @@ clean:
 	$(COMPOSE) stop
 	$(COMPOSE) rm -fv
 
-restart: clean start
+restart: clean start logs
+
+logs:
+	$(COMPOSE) logs -f node
