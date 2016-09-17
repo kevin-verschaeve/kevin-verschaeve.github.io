@@ -1,0 +1,9 @@
+// Please ask me the data if you want to acces firebase, then copy/paste to a firebase.config.ts file
+
+export const firebaseConfig = {
+	apiKey: "",
+	authDomain: "",
+	databaseURL: "",
+	storageBucket: "",
+	messagingSenderId: ""
+}

@@ -5,12 +5,15 @@ import { routing, appRoutingProviders } from './app.routing';
 import { RegisterComponent } from './register.component';
 import { SessionComponent } from './session.component';
 import { FormsModule }   from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { firebaseConfig } from './firebase.config';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   declarations: [
     AppComponent,
