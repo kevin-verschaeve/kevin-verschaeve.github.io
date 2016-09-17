@@ -7,20 +7,4 @@ import { MOVIES } from './model/movie.fixtures';
   selector: 'my-app',
   templateUrl: 'app/partials/main.html'
 })
-export class AppComponent
-{
-	public session: Session;
-
-	constructor() {
-		this.session = {
-			id: 123,
-			date: '15/09/2016',
-			users: USERS,
-			movies: MOVIES
-		}
-	}
-
-	hasVoted(voter, movie) {
-		return movie.voters.indexOf(voter) > -1;
-	}
-}
+export class AppComponent {}
