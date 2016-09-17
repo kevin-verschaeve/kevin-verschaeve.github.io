@@ -2,14 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
-import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 import { SessionComponent } from './session.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
-  imports:      [ BrowserModule, routing ],
+  imports:      [ 
+    BrowserModule,
+    routing,
+    FormsModule
+  ],
   declarations: [
     AppComponent,
-    LoginComponent,
+    RegisterComponent,
     SessionComponent
   ],
   providers: [ appRoutingProviders ],
