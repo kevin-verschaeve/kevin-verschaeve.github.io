@@ -1,9 +1,6 @@
 *.old
 
-# Jekyll
+# Eleventy
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
-Gemfile.lock
+node_modules/
+package-lock.json
